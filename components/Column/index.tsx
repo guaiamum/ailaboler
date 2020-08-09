@@ -1,11 +1,18 @@
 import './styles.sass'
 
-const Column = ({ ...props }) => (
+const Column = ({ title: columnTitle, items }: Column) => (
     <section className="column">
-        <h2>Contos</h2>
-        <p>
-            Cupidatat occaecat sunt nisi eiusmod cillum non irure sunt nulla excepteur ullamco proident. Deserunt cupidatat sunt proident qui. Voluptate duis cillum sit officia. Excepteur esse duis eiusmod sunt. Sit et irure non sunt et enim sint. Laborum velit nisi quis culpa proident sit labore et anim esse veniam commodo. Exercitation id eiusmod qui veniam labore ea nulla dolore nisi culpa laboris quis sint adipisicing.
-        </p>
+        <h2>{columnTitle}</h2>
+        {
+            items.map(({ id, title, text }) => (
+                <article key={id}>
+                    <h3>{title}</h3>
+                    <p>
+                        {text}
+                    </p>
+                </article>
+            ))
+        }
     </section>
 );
 
