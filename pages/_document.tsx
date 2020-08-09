@@ -10,7 +10,7 @@ class MyDocument extends Document {
         return (
             <Html lang="pt-br">
                 <Head >
-                    <link rel="preload" href="/fonts/Corbert-Regular.ttf" />
+                    <link rel="preload" href="/fonts/Corbert-Regular.ttf" as="font" />
                 </Head>
                 <body>
                     <Main />
